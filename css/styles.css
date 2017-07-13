@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	color: #383838;
+}
+.header {
+	height: 80px;
+	border-bottom: 1px solid #d9d9d9;
+	margin:auto;
+	text-align: center;
+	/* position: fixed; */
+}
+
+.header a {
+	color: #55689b;
+}
+
+.nav li {
+	display: inline-block;
+	padding: 30px;
+	font-size: 14px;
+}
+
+.nav li.active {
+	color: #383838;
+}
+.content {
+	max-width: 768px;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.content h1 {
+	font-size: 60px;
+	font-weight: 100;
+}
+h2 {
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+/*Реализован метод css-спрайта*/
+.icon {
+	background: url(../images/sprite.png) no-repeat;
+	height:47px;
+	width:47px;
+	margin: 60px auto 20px auto;
+}
+
+.personal .icon {
+	background-position: 0 0px;
+}
+.experience .icon {
+	background-position: 0 -47px;
+}
+.js .icon {
+	background-position: 0 -94px;
+}
+.about .icon {
+	background-position: 0 -141px;
+}
+
+input[type="text"] {
+	background-color: #fff;
+	border: 1px solid #e7e7e7;
+	border-radius: 6px;
+	font-size: 18px;
+	height: 50px;
+	width: 50%;
+	color: #383838;
+	padding: 0 10px;
+	vertical-align: top;
+	margin: 10px 0;
+}
+
+input::-webkit-input-placeholder {color:#c8c8c8;}
+input::-moz-placeholder          {color:#c8c8c8;}/* Firefox 19+ */
+input:-moz-placeholder           {color:#c8c8c8;}/* Firefox 18- */
+input:-ms-input-placeholder      {color:#c8c8c8;}
+
+button {
+	background: #435993;
+	border: none;
+	height: 45px;
+	width: 100px;
+	color: #fff;
+	border-radius: 8px;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 30px 0;
+}
+
+textarea {
+	border-radius: 5px;
+	height: 200px;
+	width: 60%;
+	padding: 0.5em;
+	font-size: 16px;
+	border: 1px solid #e7e7e7;
+}
+
+p {
+	margin: 20px auto;
+	width: 60%;
+}
+
+.full-dropdown {
+	position: relative;
+	width: 30%;
+	margin: 10px auto;
+	padding: 10px;
+	background: #fff;
+	border-radius: 6px;
+	border: 1px solid #e7e7e7;
+	
+    cursor: pointer;
+    outline: none;
+
+    font-weight: 300;
+    color: #8AA8BD;
+	
+}
+
+.full-dropdown:after {
+	content:"";
+	background: url(../images/passive.png) no-repeat;
+    width: 14px;
+    height: 9px;
+    position: absolute;
+    right: 15px;
+    top:15px;
+   
+}
+
+.full-dropdown.active:after {
+	background: url(../images/active.png) no-repeat;
+} 
+
+.full-dropdown .dropdown {
+	position: absolute;
+    top: 140%;
+    left: 0;
+    right: 0;
+
+    background: white;
+    border-radius: inherit;
+    border: 1px solid rgba(0,0,0,0.17);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-weight: normal;
+    
+    list-style: none;
+
+    opacity: 0;
+    pointer-events: none;
+}
+.full-dropdown .dropdown li a {
+	display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #8aa8bd;
+    border-bottom: 1px solid #e6e8ea;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+    
+}
+
+
+.full-dropdown .dropdown li:first-of-type a {
+	border-radius: 7px 7px 0 0;
+}
+
+
+.full-dropdown .dropdown li:last-of-type a {
+	border-radius: 0 0 7px 7px;
+    border: none;
+}
+
+.full-dropdown .dropdown li:hover a {
+	background: #f3f8f8;
+}
+
+.full-dropdown .dropdown:after {
+	content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 15px;
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: #fff transparent;
+}
+
+
+.full-dropdown .dropdown:before {
+	content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 13px;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.1) transparent;
+}
+
+.full-dropdown.active .dropdown {
+	opacity: 1;
+    pointer-events: auto;
+}
+
+
+.dropdown-menu ul {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  list-style: none;
+  display: none;
+
+}
+
+
+.dropdown-menu ul li {
+    background: #0085b6;
+    height: 35px;
+}
+.dropdown-menu ul li:hover {
+    background: #1d9fcb;
+}
+.dropdown-menu ul li a {
+  display: block;
+  width: 100%;
+  padding: 5px 35px;
+  text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+.dropdown-menu .title {
+    display: inline-block;
+    width: 80px;
+    height: 20px;
+    padding: 5px 0  5px 35px;
+    font-size: 15px;
+    line-height: 20px;
+    cursor: pointer;
+    background: #eaecf0 url(img/flag_english.png) no-repeat 5px center;
+}
+
+.dropdown-menu .title::after {
+  content: "";
+  float: right;
+  display: block;
+  background: url(img/arrow_down.png) no-repeat 10px center;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.dropdown-menu.open .title {
+  background: #0085b6 url(img/flag_english_active.png) no-repeat 5px center;
+  color: #fff;
+  border-bottom: 4px solid #1d9fcb;
+}
+
+.dropdown-menu.open .title::after {
+  background: url(img/arrow_up.png) no-repeat 10px center;
+}
+
+.dropdown-menu.open ul {
+  display: block;
+}
+/* Для прокрутки года рождения */
+.scroll {
+	overflow-y:auto;
+    overflow-x:hidden;
+    height:300px;
+} 
+
+
+.checkbox {
+	text-align:left;
+	padding: 5px;
+}
+
+.cb-section {
+	display: inline-block;
+	padding-right: 20px;
+}
+
+label {
+    
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 40px;
+	width: 200px;
+}
+
+label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 15px;
+    position: absolute;
+	border-radius: 3px;
+    left: 0;
+    bottom: 1px;
+    background-color: #fff;
+    border: 1px solid #435993;
+}
+
+
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+	display: none;
+}
+
+input[type=checkbox]:checked + label:before {
+	content: "\2713";
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	font-size: 15px;
+	color: #435993;
+	text-align: center;
+    line-height: 15px;
+}

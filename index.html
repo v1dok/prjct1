@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/js.js"></script> -->
+<script type="text/javascript" src="js/script.js"></script>
+
+
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<title>Анкета</title>
+</head>
+<body>
+<div class="header">
+<ul class="nav">
+<li class="active">Личная информация</li>
+<li><a href="#exp">Опыт</a></li>
+<li><a href="#js">JavaScript</a></li>
+<li><a href="#about">О себе</a></li>
+</ul>
+</div>
+
+<div class="content">
+
+<form id="mainform">
+<h1>Анкета</h1>
+
+<div class="personal">
+<div class="icon">
+</div>
+<h2 id="personal">Личная информация</h2>
+
+
+<input type="text" name="" value="" placeholder="ФИО">
+
+
+<div id="dd" class="full-dropdown" tabindex="1"> 
+<span class="title">Год рождения</span>
+<ul class="dropdown">
+<div class="scroll">
+<li><a href="#">1970</a></li>
+<li><a href="#">1971</a></li>
+<li><a href="#">1972</a></li>
+<li><a href="#">1973</a></li>
+<li><a href="#">1974</a></li>
+<li><a href="#">1975</a></li>
+<li><a href="#">1976</a></li>
+<li><a href="#">1977</a></li>
+<li><a href="#">1978</a></li>
+<li><a href="#">1979</a></li>
+<li><a href="#">1980</a></li>
+<li><a href="#">1981</a></li>
+<li><a href="#">1982</a></li>
+<li><a href="#">1983</a></li>
+<li><a href="#">1984</a></li>
+<li><a href="#">1985</a></li>
+<li><a href="#">1986</a></li>
+<li><a href="#">1987</a></li>
+<li><a href="#">1988</a></li>
+<li><a href="#">1989</a></li>
+<li><a href="#">1990</a></li>
+<li><a href="#">1991</a></li>
+<li><a href="#">1992</a></li>
+<li><a href="#">1993</a></li>
+<li><a href="#">1994</a></li>
+<li><a href="#">1995</a></li>
+<li><a href="#">1996</a></li>
+<li><a href="#">1997</a></li>
+<li><a href="#">1998</a></li>
+<li><a href="#">1999</a></li>
+</div>
+
+</ul>
+</div>
+
+
+<input type="text" name="" placeholder="Место проживания">
+<input type="text" name="" placeholder="Skype">
+<input type="text" name="" placeholder="Email">
+
+
+</div>
+
+<div class="experience">
+<div class="icon">
+</div>
+<h2 id="exp">Расскажите о своем опыте</h2>
+
+
+
+
+<div class="cb-section">
+<div class="checkbox">
+	<input id="check1" type="checkbox" name="check" value="check1">
+	<label for="check1">БЭМ/OOCS</label>
+</div>
+<div class="checkbox">
+	<input id="check3" type="checkbox" name="check" value="check2">
+	<label for="check3">Webpack</label>
+</div>
+<div class="checkbox">
+	<input id="check2" type="checkbox" name="check" value="check2" checked>
+	<label for="check2">Верстаю семантично</label>
+</div>
+</div>
+
+<div class="cb-section">
+<div class="checkbox">
+	<input id="check4" type="checkbox" name="check" value="check1">
+	<label for="check4">Stylus/LESS/SASS</label>
+</div>
+<div class="checkbox">
+	<input id="check5" type="checkbox" name="check" value="check2">
+	<label for="check5">ES2015/ES2016</label>
+</div>
+<div class="checkbox">
+	<input id="check7" type="checkbox" name="check" value="check1">
+	<label for="check7">Работаю с SVG</label>
+</div>
+</div>
+
+<div class="cb-section">
+<div class="checkbox">
+	<input id="check8" type="checkbox" name="check" value="check2">
+	<label for="check8">Gulp/GRUNT</label>
+</div>
+<div class="checkbox">
+	<input id="check6" type="checkbox" name="check" value="check2">
+	<label for="check6">JQuery</label>
+</div>
+<div class="checkbox">
+	<input id="check9" type="checkbox" name="check" value="check2">
+	<label for="check9">Использую Git</label>
+</div>
+</div>
+
+</div>
+<div class="js">
+<div class="icon">
+</div>
+
+<h2 id="js">Уровень владения JavaScript</h2>
+
+<span id="contentSlider"></span>
+<div id="slider"></div>
+
+</div>
+
+<div class="about">
+<div class="icon">
+</div>
+
+<h2 id="about">Расскажите о себе</h2>
+<p>Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</p>
+
+<textarea placeholder="Понравилось тем, что ..."></textarea>
+</div>
+
+<button>Готово</button>
+</form>
+</div>
+
+</body>
+</html>

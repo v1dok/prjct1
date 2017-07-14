@@ -1,42 +1,19 @@
-function DropDown(el) {
-    this.dd = el;
-    this.placeholder = this.dd.children('span');
-    this.opts = this.dd.find('ul.dropdown > li');
-    this.val = '';
-    this.index = -1;
-    this.initEvents();
-}
-DropDown.prototype = {
-    initEvents : function() {
-        var obj = this;
+$( ".slider" ).slider({
+			    animate: true,
+                range: "min",
+                value: 30,
+                min: 0,
+                max: 90,
+				step: 30,
+                
+				//Получаем значение и выводим его на странице
+                slide: function( event, ui ) {
+                    $( "#slider-result" ).html( ui.value );
+                },
 
-        obj.dd.on('click', function(event){
-            $(this).toggleClass('active');
-            return false;
-        });
-        obj.opts.on('click',function(){
-            var opt = $(this);
-            obj.val = opt.text();
-            obj.index = opt.index();
-            obj.placeholder.text(obj.val);
-        });
-    },
-    getValue : function() {
-        return this.val;
-    },
-    getIndex : function() {
-        return this.index;
-    }
-}
-
-$(function() {
-
-    var dd = new DropDown( $('#dd') );
-
-    $(document).click(function() {
-        // all dropdowns
-        $('.full-dropdown').removeClass('active');
-    });
+				//обновляем скрытое поле формы, так что можно передать данные с помощью формы
+                change: function(event, ui) { 
+                $('#hidden').attr('value', ui.value);
+                }
+			
 });
-
-

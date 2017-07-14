@@ -5,7 +5,10 @@
 <link rel="stylesheet" href="css/styles.css" type="text/css">
 <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
 <!-- <script type="text/javascript" src="js/js.js"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script> 
 <script type="text/javascript" src="js/script.js"></script>
+
 
 
 <!--[if lt IE 9]>
@@ -16,8 +19,10 @@
 </head>
 <body>
 <div class="header">
-<ul class="nav">
-<li class="active">Личная информация</li>
+<input type="checkbox" name="menu" id="menu" />
+<label for="menu">Меню</label>
+<ul>
+<li><a href="#personal">Личная информация</a></li>
 <li><a href="#exp">Опыт</a></li>
 <li><a href="#js">JavaScript</a></li>
 <li><a href="#about">О себе</a></li>
@@ -35,11 +40,11 @@
 <h2 id="personal">Личная информация</h2>
 
 
-<input type="text" name="" value="" placeholder="ФИО">
+<input type="text" name="" value="Маратов Мирас Маратулы" placeholder="ФИО">
 
 
 <div id="dd" class="full-dropdown" tabindex="1"> 
-<span class="title">Год рождения</span>
+<span class="title">1989</span>
 <ul class="dropdown">
 <div class="scroll">
 <li><a href="#">1970</a></li>
@@ -77,10 +82,9 @@
 </ul>
 </div>
 
-
-<input type="text" name="" placeholder="Место проживания">
-<input type="text" name="" placeholder="Skype">
-<input type="text" name="" placeholder="Email">
+<input type="text" name="" value="Усть-Каменогорск" placeholder="Место проживания">
+<input type="text" name="" value="miras.maratov" placeholder="Skype">
+<input type="text" name="" value="garry.talent@gmail.com" placeholder="Email">
 
 
 </div>
@@ -89,9 +93,6 @@
 <div class="icon">
 </div>
 <h2 id="exp">Расскажите о своем опыте</h2>
-
-
-
 
 <div class="cb-section">
 <div class="checkbox">
@@ -145,19 +146,23 @@
 
 <h2 id="js">Уровень владения JavaScript</h2>
 
-<span id="contentSlider"></span>
-<div id="slider"></div>
+	<div class="slider-container">
+		<span>Не владею</span><span>Использую готовые решения</span><span>Использую готовые решения и умею переделывать</span><span>Пишу сложный JS с нуля</span>
+        <div class="slider"></div>  
+  		<input type="hidden" id="hidden"/>
+	</div>
 
 </div>
 
 <div class="about">
 <div class="icon">
 </div>
-
+<script type="text/javascript" src="js/js.js"></script>
 <h2 id="about">Расскажите о себе</h2>
 <p>Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</p>
 
-<textarea placeholder="Понравилось тем, что ..."></textarea>
+<textarea name="about" placeholder="Понравилось тем, что ..." wrap="hard">
+Я новичок в этом деле, и даже это тестовое задание в какой то степени стало для меня обучением. Не скрою, некоторые вещи брал с просторов интернета. В слайдере использовал готовый JQuery. Про опыт: слышал про технологии, но использовать их не приходилось, как я уже сказал новичок в этом деле. Ваша вакансия привлекла тем, что я давно хотел работать в этой сфере, и у вас можно работать удаленно. От работы ожидаю что, так как будет ответственность, то буду работать, выполнять задания (а не бросил через некоторое время).</textarea>
 </div>
 
 <button>Готово</button>
